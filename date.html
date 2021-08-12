@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Current Date</title>
+	<style type="text/css">
+		body{
+			background-color: black;
+			color: white;
+		}
+		input{
+			padding: 10px;
+			margin-bottom: 15px;
+			font-weight: bolder;
+		}
+		button{
+			padding: 10px;
+			text-align: center;
+			color: red;
+		}
+		p{
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+
+	<!--function to get date-->
+	<h1>Current Date</h1>
+	<p id="p1"></p>
+	<!--end of function----->
+
+	<script type="text/javascript">
+		//function to get date
+	var today=new Date();
+	var date= today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+	document.getElementById('p1').innerHTML=date;
+
+	//end of function
+	</script>
+</body>
+</html>

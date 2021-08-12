@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Get temperature</title>
+	<style type="text/css">
+		body{
+			background-color: black;
+			color: white;
+		}
+		input{
+			padding: 10px;
+			margin-bottom: 15px;
+			font-weight: bolder;
+		}
+		button{
+			padding: 10px;
+			text-align: center;
+			color: red;
+		}
+		p{
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Convert temperature to and from C, F</h1>
+
+	<!--function to get user inputs-->
+	<input type="text" id="fahrenheit" placeholder="Fahrenheit" name="f" value="" /><br>
+	<input type="text" id="celsius" placeholder="Celsius" name="c" value="" /><br>
+
+	<!--js to convert-->
+	<button id="convert">Convert!</button>
+
+	<script type="text/javascript">
+		//function to convert temperature
+		document.getElementById('convert').onclick = tempConvert;
+
+	function tempConvert() {
+    
+    var fahrenheit = document.getElementById("fahrenheit").value;
+    var celsius = document.getElementById("celsius").value;
+  
+  if (fahrenheit != '') {
+        celsius = (parseFloat(fahrenheit) - 32) / 1.8;
+    } else {
+        fahrenheit = (parseFloat(celsius) * 1.8) + 32;
+    }
+
+    document.getElementById('fahrenheit').value = parseFloat(fahrenheit).toFixed(1);
+    document.getElementById('celsius').value = parseFloat(celsius).toFixed(1);
+	}
+
+	</script>
+</body>
+</html>
